@@ -47,22 +47,18 @@ def BullCow(number, answer):
     number_list = list(number)
     answer_list = list(answer)
 
-    # цикл для подсчёта коров
-    i = 0
-    for _ in range(len(number_list)):
+    # цикл для подсчёта быков
+    for i in range(len(number_list)):
         if number_list[i] == answer_list[i]:
             bull+=1
-        i+=1
+
     
-    # двойной цикл для подсчёта быков
-    i = 0
-    for _ in range(len(number_list)):
-        j = 0
-        for _ in range(len(answer_list)):
+    # двойной цикл для подсчёта коров
+    for i in range(len(number_list)):
+        for j in range(len(answer_list)):
             if number_list[i] == answer_list[j]:
                 cow += 1
-            j+=1
-        i += 1
+
 
     print (f'Коровы - {cow} : Быки - {bull}')
 
